@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Recuperar contraseña</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content color="dark">
+  <div id="container">
+
+    <p style="color: black;" class="titulo">Formulario</p>
+    <p style="color: black;" class="titulo"><sub>ingrese su nombre de usuario para enviar un correo de recuperacion</sub></p>
+    <br>
+      <ion-item color="dark">
+        <ion-label position="floating"><p>Usuario</p></ion-label>
+        <ion-input #usuario  ></ion-input>
+      </ion-item>
+    <br>
+      <ion-button (click)="login(usuario)" color="primary">
+        <ion-icon name="build-outline" slot="end"></ion-icon>
+        Recuperar
+      </ion-button>
+    <br>
+    <br>
+    </div>
+</ion-content>
+<ion-footer>
+  <ion-toolbar>
+    <img src="assets/img/footer.png" />
+  </ion-toolbar>
+</ion-footer>

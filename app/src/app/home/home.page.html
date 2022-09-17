@@ -1,0 +1,38 @@
+<ion-header [translucent]="true" color="primary">
+  <ion-toolbar style="background-color:#012C56 ;" color="primary">
+    <img style="background-color:#012C56 ;" src="assets/img/logo.png" />
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" color="dark">
+<div id="container">
+
+<p style="color: black;">RegistrApp</p>
+<br>
+  <ion-item color="dark">
+    <ion-label position="floating"><p>Usuario</p></ion-label>
+    <ion-input #usuario [(ngModel)]="user"></ion-input>
+  </ion-item>
+
+  <ion-item color="dark">
+    <ion-label position="floating"><p>Contraseña</p></ion-label>
+    <ion-input type="password" class="sc-ion-input-ios-h sc-ion-input-ios-s ios hydrated" #contra></ion-input>
+  </ion-item>
+<br>
+  <ion-button (click)="login(usuario, contra, user)"   color="primary">
+    <ion-icon name="log-in-outline" slot="end"></ion-icon>
+    Ingresar
+  </ion-button>
+<br>
+<br>
+    <p class="titulo"  [routerLink]="['/recuperar']"><sub>¿olvidaste la contraseña?</sub></p>
+
+</div>
+
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <img src="assets/img/footer.png" />
+  </ion-toolbar>
+</ion-footer>

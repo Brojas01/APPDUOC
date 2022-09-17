@@ -1,0 +1,77 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button [routerLink]="['/index']" ></ion-back-button>
+    </ion-buttons>
+    <ion-title>Justificar</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content color="dark">
+
+  <h2 class="titulo">justificar inasistencia</h2>
+  <ion-card-content >
+
+<ion-item color="primary">
+  <ion-list>
+    <ion-item color="primary">
+      <ion-select placeholder="seleccione un ramo" value="default" #ramo>
+        <ion-select-option value="calidad">Calidad de software</ion-select-option>
+        <ion-select-option value="web">Programacion web</ion-select-option>
+        <ion-select-option value="basedatos">Programacion base de datos</ion-select-option>
+        <ion-select-option value="algoritmos">Programacion de algoritmos</ion-select-option>
+        <ion-select-option value="gestion">Gestion de proyectos</ion-select-option>
+        <ion-select-option value="etica">Etica</ion-select-option>
+      </ion-select>
+    </ion-item>
+  </ion-list>
+</ion-item>
+
+    <hr>
+
+    <ion-item color="primary">
+      <ion-label>dia</ion-label>
+      <ion-input
+        value="{{ date | date: 'dd.MM.yyyy' }}"
+        id="date"
+        class="ion-text-end"
+        #dia
+      ></ion-input>
+      <ion-popover trigger="date" size="cover">
+        <ng-template>
+          <ion-datetime
+            presentation="date"
+            [(ngModel)]="date"
+            locale="sl-SI"
+          ></ion-datetime>
+        </ng-template>
+      </ion-popover>
+    </ion-item>
+    
+    <hr>
+    <ion-item color="primary">
+      <ion-label>asunto</ion-label>
+      <ion-input #asunto></ion-input>
+    </ion-item>
+      <hr>
+    <ion-item color="primary">
+      <ion-item color="primary">
+        <ion-textarea placeholder="texto (opcional)" #texto></ion-textarea>
+      </ion-item>
+    </ion-item>
+      <hr>
+    <ion-item color="primary">
+        <input type="file" #archivo>
+    </ion-item>
+
+  </ion-card-content>
+
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar color="primary">
+    <ion-button (click)="enviar(ramo, dia, asunto, texto, archivo)"  shape="round" slot="end" color="warning">
+      <ion-icon name="paper-plane-outline"></ion-icon>
+    </ion-button>
+  </ion-toolbar>
+</ion-footer>

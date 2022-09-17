@@ -1,0 +1,54 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start" >
+      <ion-back-button [routerLink]="['/index']" ></ion-back-button>
+    </ion-buttons>
+    <ion-title>Horario del dia</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content color="dark">
+  <ion-toolbar color="secondary">
+    <ion-title style="color: black;">Ingenieria en informatica</ion-title>
+  </ion-toolbar>
+
+ <p class="titulo">"dia y fecha" </p>
+ <p class="titulo"><sub>escanee codigo "QR" para marcar la asistencia</sub></p>
+
+
+ <ion-card>
+  <ion-item color="primary">
+    <ion-label>calidad de software<br><sub>08:30 am / 11:20 am</sub></ion-label>
+    <ion-icon slot="end" name="checkmark-done-outline"></ion-icon>
+  </ion-item>
+</ion-card>
+
+<ion-card>
+  <ion-item color="primary">
+    <ion-label>programacion web<br><sub>12:00 pm / 13:30 pm</sub></ion-label>
+    <ion-button  slot="end" color="warning">QR</ion-button>
+  </ion-item>
+</ion-card>
+
+<ion-card>
+  <ion-item color="primary">
+    <ion-label>programacion base de datos<br><sub>15:10 pm / 17:00 pm</sub></ion-label>
+    <ion-button color="warning" slot="end">QR</ion-button>
+  </ion-item>
+</ion-card>
+
+<ion-card>
+  <ion-item color="primary">
+    <ion-label>programacion de algoritmos<br><sub>17:15 pm / 18:50 pm</sub></ion-label>
+    <ion-button color="warning " slot="end">QR</ion-button>
+  </ion-item>
+</ion-card>
+
+</ion-content>
+
+
+<ion-footer>
+  <ion-toolbar color="primary">
+    <img src="assets/img/footer.png" />
+  </ion-toolbar>
+</ion-footer>
